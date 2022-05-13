@@ -1,7 +1,7 @@
 import './App.css';
 import Weather from './components/Weather';
 
-function App() {
+function App() {    
   return (
     <>
     <Weather/>

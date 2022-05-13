@@ -4,7 +4,9 @@ export default function Weather() {
     const [search, setSearch] = useState('Surat');
     const [disp, setDisp] = useState({});
     useEffect(() => {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=a0310e8bd954c662032e4a5fbfeb6e7f`;
+        // console.log(process.env.REACT_WEATHER_API_KEY);
+        const app_key=process.env.REACT_APP_WEATHER_API_KEY;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${app_key}`;
         const fetchApi = async () => {
             const resp = await fetch(url);
             const data = await resp.json();
